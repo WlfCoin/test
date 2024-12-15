@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolf Miner</title>
+    <link rel="stylesheet" href="https://wolfcoin.net/css/home.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self'">
+    <script src="https://wolfcoin.net/js/home.js" defer></script>
+</head>
+<body>
+    <div class="sky">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+    </div>
+    <div class="ground">
+        <div class="hill hill1"></div>
+        <div class="hill hill2"></div>
+        <div class="hill hill3"></div>
+    </div>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Welcome to the hunt, wolf</h1>
+         <p>Stay in the wolf community. Let everyone see the power of the wolf alliance.</p>
+         <p>Soon those who did not join will regret it.</p>
+         </header>
+
+        <!-- Main Section -->
+        <main>
+            <!-- Miner Section -->
+            <div class="miner">
+                <div class="miner-button">
+                    <button id="hunt-button" onclick="startMining()">Hunt</button>
+                    <div id="timer-display" class="hidden">04:00:00</div>
+                </div>
+                <div class="user-info">
+                    <div id="mining-rate">0.5/h</div>
+                    <div id="username-display">Username</div>
+                </div>
+            </div>
+
+            <!-- Bonus Section -->
+            <div class="bonus">
+                <button id="bonus-button">Bonus</button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <button onclick="navigateTo('invite')">Invite</button>
+            <button onclick="navigateTo('boost')">Boost</button>
+            <button onclick="navigateTo('home')">Home</button>
+            <button onclick="navigateTo('tasks')">Tasks</button>
+            <button onclick="navigateTo('wallet')">Wallet</button>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+@font-face {
+    font-family: w1;
+    src: url(https://wolfcoin.net/fonts/TalkComic.woff) format('woff');
+    font-weight: bolder;
+    font-style: italic;
+    
+}
+
+@font-face {
+    font-family: w2;
+    src: url(https://wolfcoin.net/fonts/RisalahSalam.woff) format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: w3;
+    src: url(https://wolfcoin.net/fonts/Black.woff) format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+body {
+    font-family: w1;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    overflow: hidden
+}
+/* بخش آسمان */
+.sky {
+    background: linear-gradient(to bottom, #87ceeb, #70c5f0);
+    height: 40vh; /* یک سوم صفحه */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* ابرها */
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 20px;
+}
+
+.cloud::after {
+    width: 80px;
+    height: 80px;
+    top: -50px;
+    left: 50px;
+}
+
+.cloud1 {
+    width: 100px;
+    height: 50px;
+    top: 10px;
+    left: -150px;
+    animation: moveClouds 20s linear infinite;
+}
+
+.cloud2 {
+    width: 120px;
+    height: 60px;
+    top: 50px;
+    left: -250px;
+    animation: moveClouds 25s linear infinite;
+}
+
+.cloud3 {
+    width: 140px;
+    height: 70px;
+    top: 20px;
+    left: -350px;
+    animation: moveClouds 30s linear infinite;
+}
+
+@keyframes moveClouds {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(150vw);
+    }
+}
+
+/* بخش زمین */
+.ground {
+    background: linear-gradient(to top, #76c06e, #8fd98f);
+    height: 60vh; /* دو سوم صفحه */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: inset 0px -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* تپه‌ها */
+.hill {
+    position: absolute;
+    background: #6ebd6b;
+    border-radius: 50%;
+}
+
+.hill1 {
+    width: 300px;
+    height: 150px;
+    bottom: -75px;
+    left: 50px;
+}
+
+.hill2 {
+    width: 400px;
+    height: 200px;
+    bottom: -100px;
+    left: 250px;
+}
+
+.hill3 {
+    width: 500px;
+    height: 250px;
+    bottom: -125px;
+    left: 500px;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.invite-section {
+    margin: 20px auto;
+}
+
+.invite-link {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.invite-link input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.invite-link button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+footer button {
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

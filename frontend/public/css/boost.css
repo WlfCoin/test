@@ -1,0 +1,226 @@
+@font-face {
+    font-family: w1;
+    src: url(https://wolfcoin.net/fonts/TalkComic.woff) format('woff');
+    font-weight: bolder;
+    font-style: italic;
+    
+}
+
+@font-face {
+    font-family: w2;
+    src: url(https://wolfcoin.net/fonts/RisalahSalam.woff) format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: w3;
+    src: url(https://wolfcoin.net/fonts/Black.woff) format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+body {
+    font-family: w1;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* بخش آسمان */
+.sky {
+    background: linear-gradient(to bottom, #87ceeb, #70c5f0);
+    height: 40vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* ابرها */
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 20px;
+}
+
+.cloud::after {
+    width: 80px;
+    height: 80px;
+    top: -50px;
+    left: 50px;
+}
+
+.cloud1 {
+    width: 100px;
+    height: 40px;
+    top: 50px;
+    left: -150px;
+    animation: moveClouds 20s linear infinite;
+}
+
+.cloud2 {
+    width: 120px;
+    height: 60px;
+    top: 70px;
+    left: -250px;
+    animation: moveClouds 25s linear infinite;
+}
+
+.cloud3 {
+    width: 140px;
+    height: 70px;
+    top: 50px;
+    left: -350px;
+    animation: moveClouds 30s linear infinite;
+}
+
+@keyframes moveClouds {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(150vw);
+    }
+}
+
+/* بخش زمین */
+.ground {
+    background: linear-gradient(to top, #76c06e, #8fd98f);
+    height: 60vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: inset 0px -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* تپه‌ها */
+.hill {
+    position: absolute;
+    background: #6ebd6b;
+    border-radius: 50%;
+}
+
+.hill1 {
+    width: 300px;
+    height: 150px;
+    bottom: -75px;
+    left: 50px;
+}
+
+.hill2 {
+    width: 400px;
+    height: 200px;
+    bottom: -100px;
+    left: 250px;
+}
+
+.hill3 {
+    width: 500px;
+    height: 250px;
+    bottom: -125px;
+    left: 500px;
+}
+
+h1 {
+    color: #f00621;
+    text-align: center;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: #3812d0;
+    color: rgb(232, 232, 10);
+    padding: 10px 20px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: w1;
+}
+
+.accordion-button:hover {
+    background-color: #e90b0b;
+}
+
+.accordion-content {
+    display: none; /* محتوای منوها در ابتدا پنهان باشد */
+    padding: 15px;
+    border: 1px solid #14b3b3f6;
+    border-top: none;
+}
+
+.accordion-content.show {
+    display: block; /* وقتی کلاس show اضافه شود، محتوا نمایش داده شود */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #007bff;
+    background: url(https://wolfcoin.net/images/icon3-5.jpg) no-repeat center center;
+    background-size: 100%;
+}
+
+th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: #0aed16;
+}
+td {
+    color: #0dcef0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+td:hover {
+    color: cyan;
+    font-size: 20px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+tr:hover {
+    background-color: #e9370b;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
